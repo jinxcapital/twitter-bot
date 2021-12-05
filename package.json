@@ -1,5 +1,5 @@
 {
-  "name": "@jinxcapital/api",
+  "name": "@jinxcapital/twitter-bot",
   "private": true,
   "scripts": {
     "dev": "nodemon",
