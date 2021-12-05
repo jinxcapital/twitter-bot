@@ -28,6 +28,8 @@ export default async () => {
       coin.price,
     )}. How are we feeling about it today? #bitcoin $btc`;
 
+    console.log(text);
+
     await tweet(text, chart);
   } catch (e) {
     console.error(e);
