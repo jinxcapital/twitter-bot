@@ -31,7 +31,7 @@ export const tweet = async (text: string, media?: Buffer) => {
 
   try {
     await twitter.post('statuses/update', tweet);
-  } catch (e) {
+  } catch {
     return false;
   }
 
