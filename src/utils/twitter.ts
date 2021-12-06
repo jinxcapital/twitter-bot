@@ -20,12 +20,12 @@ const uploadMedia = async (media: Buffer) => {
 };
 
 export const tweet = async (text: string, media?: Buffer) => {
-  const tweet = { status: text, media_ids: [] as string[] };
+  const tweet = { status: text, media_ids: '' };
   if (media) {
     const mediaId = await uploadMedia(media);
 
     if (mediaId) {
-      tweet.media_ids.push(mediaId);
+      tweet.media_ids = mediaId;
     }
   }
 
