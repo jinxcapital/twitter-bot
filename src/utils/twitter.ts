@@ -2,7 +2,7 @@ import Twitter from 'twitter';
 
 const twitter = new Twitter({
   consumer_key: process.env.TWITTER_API_KEY as string,
-  consumer_secret: process.env.TWITTER_API_KEY_SECRET as string,
+  consumer_secret: process.env.TWITTER_API_SECRET as string,
   access_token_key: process.env.TWITTER_ACCESS_TOKEN as string,
   access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET as string,
 });
