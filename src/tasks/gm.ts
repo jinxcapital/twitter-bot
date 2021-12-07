@@ -40,7 +40,7 @@ export default async () => {
       )} BTC.`;
     }
 
-    text += ' How are we feeling about Bitcoin today? $bitcoin $btc';
+    text += ' How are we feeling about Bitcoin today? #bitcoin $btc';
 
     await tweet(text, chart);
   } catch (e) {
