@@ -35,7 +35,7 @@ export default async () => {
     )} and is currently sitting at ${dollarFormatter.format(coin.price)}.`;
 
     if (exchangeFlows.total.change.day) {
-      text += ` Exchange netflow: ${bigNumberFormatter.format(
+      text += ` Exchange netflow last 24h: ${bigNumberFormatter.format(
         exchangeFlows.total.change.day,
       )} BTC.`;
     }
