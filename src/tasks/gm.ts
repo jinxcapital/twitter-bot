@@ -34,9 +34,9 @@ export default async () => {
       coin.percentageChange24h / 100,
     )} and is currently sitting at ${dollarFormatter.format(coin.price)}.`;
 
-    if (exchangeFlows.total.change.day) {
+    if (exchangeFlows.diff24h) {
       text += ` Exchange netflow last 24h: ${bigNumberFormatter.format(
-        exchangeFlows.total.change.day,
+        exchangeFlows.diff24h,
       )} BTC.`;
     }
 
