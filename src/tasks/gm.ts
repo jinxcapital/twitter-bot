@@ -21,10 +21,6 @@ export default async () => {
       maximumFractionDigits: 2,
       signDisplay: 'always',
     });
-    const bitcoinFormatter = Intl.NumberFormat('en-US', {
-      notation: 'compact',
-      maximumFractionDigits: 1,
-    });
     const bigDollarFormatter = Intl.NumberFormat('en-US', {
       notation: 'compact',
       maximumFractionDigits: 1,
@@ -41,7 +37,7 @@ export default async () => {
       coin.percentageChange24h < 0 ? 'down' : 'up'
     } ${percentageFormatter.format(
       coin.percentageChange24h / 100,
-    )} and is currently sitting at ${bitcoinFormatter.format(
+    )} and is currently sitting at ${bigDollarFormatter.format(
       coin.price,
     )} while open interest ${
       leverage.openInterestChange > 0 ? 'increased' : 'decreased'
