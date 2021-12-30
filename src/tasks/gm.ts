@@ -1,7 +1,7 @@
 import fetch from 'node-fetch';
 import { tweet } from 'utils/twitter';
 
-export default async () => {
+const gm = async () => {
   try {
     const { data: coin } = await (
       await fetch('https://api.jinx.capital/coins/btc')
@@ -56,5 +56,14 @@ export default async () => {
     await tweet(text, chart);
   } catch (e) {
     console.error(e);
+  }
+};
+
+export default async () => {
+  try {
+    await gm();
+  } catch {
+    await new Promise((resolve) => setTimeout(resolve, 3000));
+    await gm();
   }
 };
