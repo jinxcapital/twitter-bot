@@ -27,6 +27,12 @@ const gm = async () => {
       currency: 'usd',
       style: 'currency',
     });
+    const liqsFormatter = Intl.NumberFormat('en-US', {
+      notation: 'compact',
+      maximumFractionDigits: 0,
+      currency: 'usd',
+      style: 'currency',
+    });
     const bigNumberFormatter = Intl.NumberFormat('en-US', {
       notation: 'compact',
       maximumFractionDigits: 1,
@@ -43,7 +49,9 @@ const gm = async () => {
       leverage.openInterestChange > 0 ? 'increased' : 'decreased'
     } by ${percentageFormatter.format(
       leverage.openInterestChange / 100,
-    )} to ${bigDollarFormatter.format(leverage.openInterest)}.`;
+    )} to ${bigDollarFormatter.format(
+      leverage.openInterest,
+    )} with ${liqsFormatter.format(leverage.liquidations24h)} in liquidations.`;
 
     if (exchangeFlows.diff24h) {
       text += ` Exchange balances saw ${
