@@ -19,11 +19,13 @@ const gm = async () => {
     const percentageFormatter = new Intl.NumberFormat('en-US', {
       style: 'percent',
       maximumFractionDigits: 2,
+      minimumFractionDigits: 0,
       signDisplay: 'always',
     });
     const bigDollarFormatter = Intl.NumberFormat('en-US', {
       notation: 'compact',
       maximumFractionDigits: 1,
+      minimumFractionDigits: 0,
       currency: 'usd',
       style: 'currency',
     });
@@ -36,6 +38,7 @@ const gm = async () => {
     const bigNumberFormatter = Intl.NumberFormat('en-US', {
       notation: 'compact',
       maximumFractionDigits: 1,
+      minimumFractionDigits: 0,
       signDisplay: 'always',
     });
 
