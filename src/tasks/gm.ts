@@ -59,10 +59,8 @@ const gm = async () => {
     if (exchangeFlows.diff24h) {
       text += ` Exchange balances saw ${
         exchangeFlows.diff24h < 0 ? 'a decrease' : 'an increase'
-      } of ${bigNumberFormatter.format(exchangeFlows.diff24h)} BTC.`;
+      } of ${bigNumberFormatter.format(exchangeFlows.diff24h)} $BTC.`;
     }
-
-    text += '\n\nHow are we feeling about $BTC today?';
 
     await tweet(text, chart);
   } catch (e) {
