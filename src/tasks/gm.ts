@@ -20,7 +20,7 @@ const gm = async () => {
       style: 'percent',
       maximumFractionDigits: 2,
       minimumFractionDigits: 0,
-      signDisplay: 'always',
+      signDisplay: 'never',
     });
     const bigDollarFormatter = Intl.NumberFormat('en-US', {
       notation: 'compact',
@@ -39,7 +39,7 @@ const gm = async () => {
       notation: 'compact',
       maximumFractionDigits: 1,
       minimumFractionDigits: 0,
-      signDisplay: 'always',
+      signDisplay: 'never',
     });
 
     let text = `GM! In the last 24 hours, #Bitcoin is ${
